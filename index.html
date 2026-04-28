@@ -1,0 +1,172 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Nemo Stores EDA Dashboard</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="container">
+        <!-- Hero Section -->
+        <header class="reveal">
+            <h1>네모 상가 데이터 <span class="text-gradient">심층 분석 대시보드</span></h1>
+            <p>673건의 상가 매물 데이터를 다각도로 분석하여 도출한 프리미엄 비즈니스 인사이트</p>
+        </header>
+
+        <!-- Executive Summary -->
+        <section class="glass-card reveal">
+            <h2 class="section-title">📊 데이터 프로파일링 요약</h2>
+            <div class="grid-3">
+                <div class="stat-item">
+                    <div class="stat-value">673</div>
+                    <div class="stat-label">총 수집 매물 수</div>
+                </div>
+                <div class="stat-item">
+                    <div class="stat-value">6,895만</div>
+                    <div class="stat-label">평균 보증금 (원)</div>
+                </div>
+                <div class="stat-item">
+                    <div class="stat-value">4,640만</div>
+                    <div class="stat-label">평균 권리금 (원)</div>
+                </div>
+            </div>
+            
+            <h2 class="section-title" style="margin-top: 4rem;">💡 핵심 비즈니스 인사이트 5</h2>
+            
+            <div class="insight-box">
+                <h4>1. 수치형 변수의 분포와 상권 양극화 현상</h4>
+                <p>전체 매물의 대다수는 소규모 자본으로 접근 가능한 진입 장벽이 낮은 상권에 위치해 있으나, 강남, 역삼 등 초핵심 상권에 위치한 극소수의 프라임 등급 매물들이 가격의 평균을 기형적으로 끌어올리는 극단적인 멱법칙 분포를 보입니다.</p>
+            </div>
+            
+            <div class="insight-box">
+                <h4>2. 권리금 지표를 통한 상권의 라이프사이클 및 진입 전략</h4>
+                <p>권리금이 0으로 책정된 '무권리' 매물이 데이터의 절반 이상을 차지합니다. 초기 자본이 부족한 창업자에게는 기회일 수 있으나, 확실한 영업권이 보장된 A급 매물을 인수하여 캐시카우로 활용하는 전략도 유효합니다.</p>
+            </div>
+            
+            <div class="insight-box">
+                <h4>3. 범주형 데이터를 통한 업종 편중 및 입지 전략</h4>
+                <p>'기타업종', '일반음식점', '서비스업' 매물이 압도적인 비중을 차지합니다. 강남, 역삼, 신논현역 인근에 쏠려 있으며, 2030 직장인 타겟의 프리미엄화 또는 압도적인 가성비 전략이 필수적입니다.</p>
+            </div>
+            
+            <div class="insight-box">
+                <h4>4. 조회수 및 관심도 기반의 소비자 행동 분석</h4>
+                <p>조회수가 높다고 관심 등록이 선형적으로 늘어나지 않습니다. 소비자들은 단순히 싼 매물보다 권리금이 합리적이고 인테리어가 완비된 '가성비+시간절약' 매물에 실질적인 찜(Favorite)을 누릅니다.</p>
+            </div>
+            
+            <div class="insight-box">
+                <h4>5. 결측치 및 이상치가 제시하는 프라이싱(Pricing) 맹점</h4>
+                <p>초역세권 메인 상가와 이면도로 상가의 가격 차이는 권역 프리미엄이 작용합니다. 기계적인 평균(Mean)에 의존하기보다, 유사 조건 매물들의 중앙값(Median)이나 군집 분석을 통해 프라이싱 기준점을 도출해야 합니다.</p>
+            </div>
+        </section>
+
+        <!-- Categorical Analysis -->
+        <section class="glass-card reveal">
+            <h2 class="section-title">🏢 범주형 데이터 빈도 분석</h2>
+            <div class="grid-2">
+                <div>
+                    <h3>대분류 업종 빈도</h3>
+                    <div class="chart-container">
+                        <img src="images/cat_freq_1.png" alt="대분류 업종 빈도">
+                    </div>
+                </div>
+                <div>
+                    <h3>중분류 업종 빈도</h3>
+                    <div class="chart-container">
+                        <img src="images/cat_freq_2.png" alt="중분류 업종 빈도">
+                    </div>
+                </div>
+                <div>
+                    <h3>가격 유형 빈도</h3>
+                    <div class="chart-container">
+                        <img src="images/cat_freq_3.png" alt="가격 유형 빈도">
+                    </div>
+                </div>
+                <div>
+                    <h3>가까운 지하철역 빈도 (입지)</h3>
+                    <div class="chart-container">
+                        <img src="images/cat_freq_4.png" alt="지하철역 빈도">
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Text Analysis -->
+        <section class="glass-card reveal">
+            <h2 class="section-title">📝 텍스트 키워드 분석 (TF-IDF)</h2>
+            <div class="chart-container" style="max-width: 800px; margin: 0 auto;">
+                <img src="images/tfidf_keywords.png" alt="TF-IDF 키워드 분석">
+            </div>
+            <div class="chart-description">
+                매물 제목(Title) 텍스트를 분석한 결과, '역삼동', '강남역', '초역세권', '무권리', '인테리어', '깔끔한' 등의 키워드가 최상위 TF-IDF 점수를 기록했습니다. 이는 수요자들이 가장 매력적으로 느끼는 셀링 포인트(Selling Point)가 입지와 즉시 입주 가능한 인테리어 상태임을 보여줍니다.
+            </div>
+        </section>
+
+        <!-- Deep Dive Visualizations -->
+        <section class="reveal">
+            <h2 class="section-title">🔍 심층 시각화 갤러리</h2>
+            
+            <div class="glass-card">
+                <h3>1. 보증금(deposit) 및 월세(monthlyRent) 분포</h3>
+                <div class="grid-2">
+                    <div class="chart-container"><img src="images/viz_1.png" alt="보증금 히스토그램"></div>
+                    <div class="chart-container"><img src="images/viz_2.png" alt="월세 히스토그램"></div>
+                </div>
+                <div class="chart-description">
+                    <strong>인사이트:</strong> 우측으로 길게 늘어진 꼬리(Right-Skewed) 형태는 소형 중심의 매물이 대다수이며, 극소수의 프라임 매물들이 강력한 프리미엄 월세/보증금 라인을 형성함을 의미합니다. 특정 월세 저항선이 시장에 강력하게 작동하고 있습니다.
+                </div>
+            </div>
+
+            <div class="glass-card">
+                <h3>2. 상권의 라이프사이클: 권리금 분포 및 층별 상권 특성</h3>
+                <div class="grid-2">
+                    <div class="chart-container"><img src="images/viz_3.png" alt="권리금 히스토그램"></div>
+                    <div class="chart-container"><img src="images/viz_8.png" alt="층수와 월세 산점도"></div>
+                </div>
+                <div class="chart-description">
+                    <strong>인사이트:</strong> 0원 부근에 막대가 압도적으로 높게 솟아있는 '무권리 폭증' 현상은 엑시트 수요가 큼을 보여줍니다. 층별 산점도에서는 1층의 압도적인 프리미엄(가장 높은 월세 밀집)을 명확하게 확인할 수 있습니다. 목적형 업종은 고정비 절감을 위해 2층 이상 진입을 고려해야 합니다.
+                </div>
+            </div>
+
+            <div class="glass-card">
+                <h3>3. 가성비 분석: 면적 대비 임대료 산점도</h3>
+                <div class="grid-2">
+                    <div class="chart-container"><img src="images/viz_4.png" alt="면적 대 보증금 산점도"></div>
+                    <div class="chart-container"><img src="images/viz_5.png" alt="면적 대 월세 산점도"></div>
+                </div>
+                <div class="chart-description">
+                    <strong>인사이트:</strong> 회귀선 하단의 점들은 가성비 매물로 창고/배달/스튜디오에 적합하며, 상단의 점들은 극한의 노출도를 자랑하는 1층 핵심 코너 입지입니다. 면적이 넓어질수록 부채꼴 형태로 분산이 커지는 것은 대형 평수일수록 건물 컨디션이나 입지 프리미엄의 영향력이 강해짐을 뜻합니다.
+                </div>
+            </div>
+
+            <div class="glass-card">
+                <h3>4. 범주별 가격 분포</h3>
+                <div class="grid-2">
+                    <div class="chart-container"><img src="images/viz_6.png" alt="가격유형별 보증금 박스플롯"></div>
+                    <div class="chart-container"><img src="images/viz_7.png" alt="업종별 평균 월세 막대그래프"></div>
+                </div>
+                <div class="chart-description">
+                    <strong>인사이트:</strong> 박스플롯은 소형과 프라임 상권 간의 양극화를 보여주며, 평균 월세 차트에서는 병의원, 주류점, 일반음식점과 같이 넓은 면적 및 우수 접근성이 필요한 카테고리의 임대료 부담이 큼을 직관적으로 보여줍니다.
+                </div>
+            </div>
+
+            <div class="glass-card">
+                <h3>5. 소비자 행동 퍼널 및 변수간 상관관계</h3>
+                <div class="grid-2">
+                    <div class="chart-container"><img src="images/viz_9.png" alt="조회수와 관심도 산점도"></div>
+                    <div class="chart-container"><img src="images/viz_10.png" alt="상관관계 히트맵"></div>
+                </div>
+                <div class="chart-description">
+                    <strong>인사이트:</strong> 조회수 대비 관심도 그래프에서 이탈하는 '어그로 매물'과 실제로 인기 있는 '알짜 매물' 군집을 식별할 수 있습니다. 수치형 히트맵을 통해서는 보증금과 월세 간의 강력한 상관성(0.94+)을 확인할 수 있으며, 반면 권리금은 임대료와 독립적으로 평가됨을 알 수 있습니다.
+                </div>
+            </div>
+        </section>
+
+        <footer>
+            <p>Nemo Stores Data Analysis Dashboard &copy; 2026. Designed for Data-driven Business Insights.</p>
+        </footer>
+    </div>
+    
+    <script src="script.js"></script>
+</body>
+</html>
