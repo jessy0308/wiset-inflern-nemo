@@ -5,6 +5,92 @@ backgroundColor: #fff
 paginate: true
 header: '네모 상가 데이터 EDA 리포트'
 footer: 'Nemo Stores Analysis Dashboard'
+style: |
+  section {
+    background-color: #fdfd96;
+    font-family: 'Avenir Next', 'Inter', sans-serif;
+    color: #000;
+    padding: 50px;
+    border: 8px solid #000;
+  }
+  h1 {
+    background-color: #ff7eb9;
+    border: 5px solid #000;
+    box-shadow: 10px 10px 0px #000;
+    padding: 15px 25px;
+    display: inline-block;
+    font-weight: 900;
+    text-transform: uppercase;
+    transform: rotate(-1deg);
+    margin-bottom: 30px;
+  }
+  h2 {
+    background-color: #7efaff;
+    border: 4px solid #000;
+    box-shadow: 6px 6px 0px #000;
+    padding: 8px 15px;
+    display: inline-block;
+    margin-top: 20px;
+  }
+  blockquote {
+    background: #fff;
+    border: 4px solid #000;
+    box-shadow: 8px 8px 0px #000;
+    padding: 20px;
+    margin-top: 30px;
+  }
+  table {
+    border: 5px solid #000;
+    box-shadow: 12px 12px 0px #000;
+    background: #fff;
+    width: 100%;
+  }
+  th {
+    background-color: #000 !important;
+    color: #fff !important;
+    border: 2px solid #000;
+    padding: 10px;
+  }
+  td {
+    border: 2px solid #000;
+    padding: 10px;
+    font-weight: 600;
+  }
+  img {
+    border: 5px solid #000;
+    box-shadow: 10px 10px 0px #000;
+    background: #fff;
+  }
+  footer {
+    font-weight: 800;
+    color: #000;
+    text-shadow: none;
+    background: #ff7eb9;
+    border: 3px solid #000;
+    height: 40px;
+    line-height: 25px;
+    bottom: 20px;
+    left: 20px;
+  }
+  header {
+    font-weight: 800;
+    color: #000;
+    background: #7efaff;
+    border: 3px solid #000;
+    height: 40px;
+    line-height: 25px;
+    top: 20px;
+    left: 20px;
+  }
+  section::after {
+    background: #000;
+    color: #fff;
+    padding: 5px 15px;
+    border-radius: 0;
+    font-weight: 900;
+    bottom: 20px;
+    right: 20px;
+  }
 ---
 
 # 네모 상가 데이터 심층 분석
@@ -14,7 +100,7 @@ footer: 'Nemo Stores Analysis Dashboard'
 **데이터 수**: 673건
 
 <!-- 
-발표자 노트 (2분 분량 스크립트):
+발표자 노트:
 안녕하세요. 오늘 발표를 맡은 AI 분석 어시스턴트입니다. 
 본 분석은 '네모 상가 데이터' 673건을 바탕으로 상업용 부동산 시장의 현황과 비즈니스 기회를 포착하기 위해 수행되었습니다. 
 단순한 수치 나열을 넘어, 실제 창업자나 투자자가 현장에서 체감할 수 있는 실질적인 인사이트를 도출하는 데 초점을 맞췄습니다. 
@@ -35,7 +121,7 @@ footer: 'Nemo Stores Analysis Dashboard'
 | **평균 권리금** | 약 4,640만 원 |
 
 <!-- 
-발표자 노트 (2분 분량 스크립트):
+발표자 노트:
 본격적인 분석에 앞서 전체적인 데이터의 규모와 품질을 살펴보겠습니다. 
 우리는 총 673개의 유니크한 매물 데이터를 분석에 활용했습니다. 중복 데이터가 0개라는 점은 분석의 신뢰도를 높여주는 중요한 지표입니다. 
 주목해야 할 점은 평균 보증금과 권리금의 수치입니다. 평균 보증금은 약 6,890만 원, 권리금은 4,640만 원 수준으로 나타났습니다. 
@@ -53,7 +139,7 @@ footer: 'Nemo Stores Analysis Dashboard'
 3. **입지 편중**: 강남역, 역삼역 인근에 매물이 고도로 집중. 2030 직장인 타겟 전략 필수.
 
 <!-- 
-발표자 노트 (2분 분량 스크립트):
+발표자 노트:
 데이터를 통해 도출된 가장 중요한 세 가지 비즈니스 포인트를 말씀드리겠습니다. 
 첫째, 상권의 양극화가 뚜렷합니다. 상위 10%의 매물이 전체 거래 가액의 상당 부분을 차지하는 멱법칙 분포를 보이고 있습니다. 이는 강남과 역삼이라는 지역적 특성이 가격 형성에 절대적인 영향을 미치고 있음을 의미합니다. 
 둘째, 무권리 매물의 비중이 생각보다 높다는 점입니다. 이는 초기 비용을 절감하고자 하는 예비 창업자들에게는 기회일 수 있으나, 동시에 해당 상권의 회전율이 높거나 소비력이 예전만 못하다는 경고 신호로도 해석될 수 있습니다. 
@@ -65,13 +151,13 @@ footer: 'Nemo Stores Analysis Dashboard'
 
 # 3. 업종별 빈도 분석
 
-![w:800](../images/cat_freq_1.png)
+![w:650](../images/cat_freq_1.png)
 
 - **기타업종**(325건), **일반음식점**(96건) 순으로 비중이 높음.
 - 요식업 및 서비스업의 치열한 경쟁 환경 시사.
 
 <!-- 
-발표자 노트 (2분 분량 스크립트):
+발표자 노트:
 업종별 분포를 시각화한 자료입니다. 보시다시피 '기타 업종'과 '일반 음식점'이 압도적인 비중을 차지하고 있습니다. 
 여기서 '기타 업종'은 사무실이나 특수 서비스업 등을 포함하고 있는데, 이는 강남/역삼 지역이 단순히 소비 상권일 뿐만 아니라 거대한 오피스 타운임을 방증합니다. 
 일반 음식점의 높은 빈도는 우리가 흔히 말하는 '레드오션'의 전형을 보여줍니다. 많은 이들이 요식업 창업을 희망하지만, 그만큼 폐업률과 매물 출회 빈도도 높다는 것을 의미합니다. 
@@ -83,13 +169,13 @@ footer: 'Nemo Stores Analysis Dashboard'
 
 # 4. 키워드 분석 (TF-IDF)
 
-![w:700](../images/tfidf_keywords.png)
+![w:550](../images/tfidf_keywords.png)
 
 - **주요 키워드**: 역삼동, 강남역, 인테리어, 무권리, 초역세권.
 - 수요자들은 '입지'와 '즉시 영업 가능성'을 최우선으로 고려함.
 
 <!-- 
-발표자 노트 (2분 분량 스크립트):
+발표자 노트:
 매물 설명 텍스트를 TF-IDF 알고리즘으로 분석하여 추출한 핵심 키워드 클라우드입니다. 
 가장 크게 보이는 키워드는 역시 '역삼동'과 '강남역'입니다. 부동산에서 '입지'는 결코 변하지 않는 제1원칙임을 데이터가 다시 한번 증명하고 있습니다. 
 흥미로운 점은 '인테리어'와 '무권리'라는 키워드의 빈도가 매우 높다는 것입니다. 
@@ -102,15 +188,15 @@ footer: 'Nemo Stores Analysis Dashboard'
 
 # 5. 임대료 분포 분석 (보증금/월세)
 
-<div style="display: grid; grid-template-columns: 1fr 1fr; gap: 10px;">
-  <img src="../images/viz_1.png" width="400">
-  <img src="../images/viz_2.png" width="400">
+<div style="display: grid; grid-template-columns: 1fr 1fr; gap: 15px;">
+  <img src="../images/viz_1.png" width="350">
+  <img src="../images/viz_2.png" width="350">
 </div>
 
 - **Right-Skewed**: 대다수는 저렴한 매물이나, 일부 프라임 매물이 가격 평균을 높임.
 
 <!-- 
-발표자 노트 (2분 분량 스크립트):
+발표자 노트:
 임대료의 분포도를 보겠습니다. 왼쪽은 보증금, 오른쪽은 월세의 분포입니다. 
 두 그래프 모두 왼쪽으로 치우친(Right-Skewed) 형태를 띠고 있습니다. 즉, 대다수의 매물은 우리가 흔히 생각하는 시장 가격대에 모여 있지만, 우측 끝부분에 위치한 극소수의 프라임 매물들이 엄청난 고가를 형성하고 있습니다. 
 이러한 분포에서는 '평균값'의 함정에 빠지기 쉽습니다. 소수의 초고가 매물이 평균을 크게 끌어올리기 때문입니다. 
@@ -122,16 +208,16 @@ footer: 'Nemo Stores Analysis Dashboard'
 
 # 6. 상권 가치: 권리금 및 층수
 
-<div style="display: grid; grid-template-columns: 1fr 1fr; gap: 10px;">
-  <img src="../images/viz_3.png" width="400">
-  <img src="../images/viz_8.png" width="400">
+<div style="display: grid; grid-template-columns: 1fr 1fr; gap: 15px;">
+  <img src="../images/viz_3.png" width="350">
+  <img src="../images/viz_8.png" width="350">
 </div>
 
 - **1층 프리미엄**: 도로 접점인 1층의 월세가 압도적으로 높음.
 - 목적형 업종은 2층 이상으로 진입하여 고정비 절감 권장.
 
 <!-- 
-발표자 노트 (2분 분량 스크립트):
+발표자 노트:
 층수별 임대료와 권리금의 상관관계를 분석했습니다. 
 예상대로 1층 매물의 월세와 권리금이 타 층수에 비해 압도적으로 높게 형성되어 있습니다. '가시성'과 '접근성'에 대한 비용 지불이 일어나는 것이죠. 
 하지만 여기서 전략적인 선택이 필요합니다. 만약 여러분의 사업이 워크인 고객보다 예약제나 SNS 마케팅에 의존하는 '목적형 업종'이라면, 굳이 비싼 1층을 고집할 필요가 있을까요? 
@@ -144,15 +230,15 @@ footer: 'Nemo Stores Analysis Dashboard'
 
 # 7. 면적 대비 가성비 분석
 
-<div style="display: grid; grid-template-columns: 1fr 1fr; gap: 10px;">
-  <img src="../images/viz_4.png" width="400">
-  <img src="../images/viz_5.png" width="400">
+<div style="display: grid; grid-template-columns: 1fr 1fr; gap: 15px;">
+  <img src="../images/viz_4.png" width="350">
+  <img src="../images/viz_5.png" width="350">
 </div>
 
 - 회귀선 하단 매물을 공략하여 효율적인 공간 확보 가능.
 
 <!-- 
-발표자 노트 (2분 분량 스크립트):
+발표자 노트:
 면적과 임대료 사이의 선형 회귀 분석 그래프입니다. 
 일반적으로 면적이 넓어질수록 임대료가 상승하는 것은 당연하지만, 그래프상의 점들을 보시면 회귀선에서 멀리 떨어진 매물들이 보입니다. 
 특히 회귀선 아래쪽에 위치한 점들은 '면적 대비 가격이 저렴한' 소위 가성비 매물들입니다. 반대로 선 위쪽은 입지 프리미엄이 과도하게 붙었거나 고평가된 매물일 확률이 높습니다. 
@@ -165,12 +251,12 @@ footer: 'Nemo Stores Analysis Dashboard'
 
 # 8. 소비자 행동 분석
 
-![w:800](../images/viz_9.png)
+![w:650](../images/viz_9.png)
 
 - **조회수 vs 관심도**: 단순히 싼 매물보다 '가성비+시설 완비' 매물에 실질적인 찜(Favorite)이 집중됨.
 
 <!-- 
-발표자 노트 (2분 분량 스크립트):
+발표자 노트:
 마지막으로 소비자들의 온라인 행동 패턴을 분석했습니다. 
 매물의 '조회수'와 '관심도(찜)' 사이의 관계를 살펴보면, 조회수가 높다고 해서 반드시 관심도가 비례해서 높은 것은 아닙니다. 
 사람들은 호기심에 클릭은 많이 하지만, 실제 '찜'을 누르는 행동은 훨씬 신중합니다. 
@@ -188,7 +274,7 @@ footer: 'Nemo Stores Analysis Dashboard'
 3. **리스크 관리**: 무권리 매물의 함정을 피하고 검증된 상권을 선별하는 혜안 필요.
 
 <!-- 
-발표자 노트 (2분 분량 스크립트):
+발표자 노트:
 오늘 발표의 결론입니다. 
 우리는 데이터를 통해 강남/역삼 상권의 치열함과 그 속의 기회를 동시에 보았습니다. 
 성공적인 비즈니스를 위한 세 가지 제언을 드립니다. 
@@ -204,7 +290,7 @@ footer: 'Nemo Stores Analysis Dashboard'
 ## Q&A
 
 <!-- 
-발표자 노트 (2분 분량 스크립트):
+발표자 노트:
 이상으로 '네모 상가 데이터 심층 분석' 발표를 마치겠습니다. 
 긴 시간 경청해주셔서 감사합니다. 
 오늘 다룬 내용 중 데이터의 세부적인 필터링 기준이나, 특정 업종에 특화된 추가 분석이 필요하시다면 언제든 질문 주시기 바랍니다. 
